@@ -17,7 +17,6 @@ public class HelloController {
 	@RequestMapping("/hello")
 	public String sayHi()
 	{
-		heroServ.getAllHeroes();
 		
 		System.out.println(heroServ.getAllHeroes().toString());
 		return "Hi";

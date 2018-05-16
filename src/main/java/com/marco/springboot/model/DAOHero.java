@@ -7,10 +7,12 @@ import javax.persistence.TypedQuery;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Service;
 
 import com.marco.springboot.pojos.Hero;
-import com.marco.util.HibernateUtil;
+import com.marco.springboot.util.HibernateUtil;
 
+@Service
 public class DAOHero
 {
 	//GET ALL PROFILES FROM OUR DB

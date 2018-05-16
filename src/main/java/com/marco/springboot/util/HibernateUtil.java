@@ -1,4 +1,4 @@
-package com.marco.util;
+package com.marco.springboot.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
