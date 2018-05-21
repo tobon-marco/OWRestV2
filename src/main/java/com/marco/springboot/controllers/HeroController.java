@@ -2,24 +2,26 @@ package com.marco.springboot.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.marco.springboot.pojos.Hero;
-import com.marco.springboot.service.HeroService;
+import com.marco.springboot.repos.HeroRepo;
 
 @RestController
 public class HeroController {
 	
-	HeroService heroServ = new HeroService();
+	@Autowired 
+	HeroRepo repo;
 	
 	//ALL HEROES
 	@RequestMapping("/heroes")
 	public List<Hero> getHeroes()
 	{
 		System.out.println("Test");
-		List<Hero> hrs = heroServ.getAllHeroes();
+		List<Hero> hrs = repo.findAll();
 		return hrs;
 	}
 	
@@ -27,8 +29,9 @@ public class HeroController {
 	//HERO BY NAME
 	public Hero getHeroOnName (@PathVariable String heroName)
 	{
-		Hero hr = heroServ.getHeroOnName(heroName);
-		return hr;
+		//Hero hr = repo;
+		//return hr;
+		return null;
 	}
 	
 }

@@ -11,8 +11,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 @Entity
-@Table(name="HEROES")
+@Component
+@Table(name="heroes")
 public class Hero
 {
 	//PRIVATE MEMBER FIELDS ====================================================
