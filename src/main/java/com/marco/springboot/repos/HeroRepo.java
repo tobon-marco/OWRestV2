@@ -11,7 +11,7 @@ import com.marco.springboot.pojos.Hero;
 public interface HeroRepo extends JpaRepository<Hero, Integer>
 {
 
-	@Query("Select p FROM HERO WHERE LOWER(p.name) = LOWER(:heroName)")
+	@Query("Select p FROM Hero p WHERE LOWER(p.name) = LOWER(:heroName)")
 	public Hero findByName (@Param("heroName") String heroName);
 	
 }

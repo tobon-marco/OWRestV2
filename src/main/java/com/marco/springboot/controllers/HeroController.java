@@ -29,9 +29,8 @@ public class HeroController {
 	//HERO BY NAME
 	public Hero getHeroOnName (@PathVariable String heroName)
 	{
-		//Hero hr = repo;
-		//return hr;
-		return null;
+		Hero hr = repo.findByName(heroName);
+		return hr;
 	}
 	
 }
